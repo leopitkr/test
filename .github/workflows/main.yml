@@ -2,7 +2,7 @@ name: Run Python
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main/test ]
 
   workflow_dispatch:
 
@@ -14,7 +14,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - uses: actions/actions/setup-python@v4.1.0
+      - uses: actions/setup-python@v4.1.0
       
       - name: Run python3
         run: python3 test.py
